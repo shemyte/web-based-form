@@ -1,7 +1,7 @@
 const usernameEl = document.querySelector('#username');
 const emailEl = document.querySelector('#email');
 const passwordEl = document.querySelector('#password');
-const confirmPasswordEl = document.querySelector('#confirm-password');
+// const confirmPasswordEl = document.querySelector('#confirm-password');
 
 const form = document.querySelector('#signup');
 
@@ -10,12 +10,13 @@ form.addEventListener('submit', function (e) {
     // e.preventDefault();
     // validate form
     let isUsernameValid = checkUsername(),isEmailValid = checkEmail(),
-    isPasswordValid = checkPassword(),
-    isConfirmPasswordValid = checkConfirmPassword();
+    isPasswordValid = checkPassword();
+    // isConfirmPasswordValid = checkConfirmPassword();
 
     let isFormValid = isUsernameValid && isEmailValid &&
-    isPasswordValid &&
-    isConfirmPasswordValid;
+    isPasswordValid;
+    // &&
+    // isConfirmPasswordValid;
 
     // submitting to the server if form is valid
     if(!isFormValid){
@@ -120,20 +121,20 @@ const checkPassword = () => {
 };
 
 // validating the confirm password
-const checkConfirmPassword = () => {
-    let valid = false;
-    // check confirm password
-    const confirmPassword = confirmPasswordEl.value.trim();
-    const password = passwordEl.value.trim();
+// const checkConfirmPassword = () => {
+//     let valid = false;
+//     // check confirm password
+//     const confirmPassword = confirmPasswordEl.value.trim();
+//     const password = passwordEl.value.trim();
 
-    if (!isRequired(confirmPassword)) {
-        showError(confirmPasswordEl, 'Please enter the password again');
-    } else if (password !== confirmPassword) {
-        showError(confirmPasswordEl, 'Confirm password does not match');
-    } else {
-        showSuccess(confirmPasswordEl);
-        valid = true;
-    }
+//     if (!isRequired(confirmPassword)) {
+//         showError(confirmPasswordEl, 'Please enter the password again');
+//     } else if (password !== confirmPassword) {
+//         showError(confirmPasswordEl, 'Confirm password does not match');
+//     } else {
+//         showSuccess(confirmPasswordEl);
+//         valid = true;
+//     }
 
-    return valid;
-};
+//     return valid;
+// };

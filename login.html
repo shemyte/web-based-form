@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Form Validation Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-image: url('images/sunset3.jpg'); 
+    background-size: cover; 
+    background-attachment: fixed;">
+    <div class="container">
+        <form id="signup" class="form" method="post" action="">
+            <h1>Sign In</h1>
+            <div class="form-field">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" autocomplete="off">
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email" autocomplete="off">
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" autocomplete="off">
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <input type="submit" value="Sign Up" class="btn" name="submit">
+            </div>
+
+            <div class="holder">
+                <p>Don't have an acount? <a class="reg" href="index.html">Register</a></p>
+            </div>
+            
+        </form>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
