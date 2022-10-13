@@ -7,7 +7,6 @@ const form = document.querySelector('#signup');
 
 form.addEventListener('submit', function (e) {
     // prevent the form from submitting
-    // e.preventDefault();
     
     // validate form
     let isUsernameValid = checkUsername(),isEmailValid = checkEmail(),
